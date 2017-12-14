@@ -182,7 +182,7 @@ section.section-floorplans {
 
       .download-text {
         display: flex;
-        background-color: #E03831;
+        background-color: $main-red;
         padding: 5px 15px;
         align-items: center;
         justify-content: center;
@@ -439,7 +439,7 @@ section.section-testplans {
       top: 0;
       left: 0;
       z-index: 2;
-      border-right: 2px solid #E03831;
+      border-right: 2px solid $main-red;
 
       figure.draghint-img {
         position: absolute;
@@ -452,7 +452,7 @@ section.section-testplans {
         figcaption {
           margin-top: 10px;
           margin-left: -50%;
-          color: #E03831;
+          color: $main-red;
           font-size: 10px;
           font-style: italic;
           white-space: nowrap;

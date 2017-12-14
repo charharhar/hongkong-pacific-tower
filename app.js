@@ -31,6 +31,7 @@ const leasingController = require('./controllers/leasing');
 const aboutController = require('./controllers/about');
 const innovativeController = require('./controllers/innovative');
 const contactController = require('./controllers/contact');
+const downloadsController = require('./controllers/downloads');
 
 /**
  * Create Express server.
@@ -99,6 +100,9 @@ app.get('/contact', (req, res) => {
   contactController.index(req, res, assetsMap);
 });
 
+app.get('/downloads', (req, res) => {
+  downloadsController.index(req, res, assetsMap);
+});
 
 /**
  * Start Express server.

@@ -26,6 +26,7 @@ $main-purple: #28275b;
 $main-darkBlue: #002f87;
 $main-lightBlue: #679bd1;
 $main-beige: #d6cdbe;
+$main-red: #E03831;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -455,6 +456,15 @@ section.section {
     }
   }
 
+  .responsive-width-hero {
+    position: relative;
+    width: 100%;
+
+    figure {
+      width: 100%;
+    }
+  }
+
   .full-width-slider {
     position: relative;
     width: 100%;
@@ -584,6 +594,10 @@ section.section {
 
     &.narrow-strip {
       min-height: 275px;
+    }
+
+    &.super-slim-strip {
+      min-height: 200px;
     }
 
     &.split-strip {
@@ -750,6 +764,8 @@ footer.section-footer {
       }
 
       .offcenter-panel {
+        width: 100%;
+
         &.offleft { justify-content: flex-start; }
         &.offright { justify-content: flex-end; }
       }

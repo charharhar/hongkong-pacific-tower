@@ -1,10 +1,6 @@
 
 import '../css/about.css';
-import { hotReload, sliceArray, slickHelper } from './util.js'
-
-window.addEventListener('load', function(e) {
-  console.log('--> Application started  |  Current route: /about')
-})
+import { hotReload, slickHelper } from './util.js'
 
 window.addEventListener('load', function() {
   slickHelper('#about-second-slider');

@@ -1,6 +1,6 @@
 
 import '../css/home.css';
-import { hotReload, sliceArray, slickHelper } from './util.js'
+import { hotReload } from './util.js'
 
 function isScrolledIntoView(el) {
   const elemTop = el.getBoundingClientRect().top;
