@@ -42,10 +42,6 @@ section.section-connect {
         margin-bottom: 25px;
         font-family: $helve-cond;
       }
-
-      p {
-        font-size: 12px;
-      }
     }
   }
 
@@ -532,37 +528,45 @@ section.section-integrate {
 }
 
 section.section-assurance {
+  .section-heading {
+    display: flex;
+    width: 420px;
+  }
+
   .assurance-building-wrapper {
     position: relative;
     bottom: 0;
     padding-bottom: 40px;
     padding-top: 40px;
 
-    .section-words {
+    .section-content {
       display: flex;
-      flex-flow: column nowrap;
-      width: 66.6666%;
-      max-width: none;
-      margin: 0;
       position: absolute;
       top: -60px;
       left: 50%;
       transform: translateX(-50%);
+      width: 66.6666%;
+      justify-content: flex-end;
+    }
+
+    .section-words {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 420px;
+      margin: 0;
 
       h2 {
         font-family: $helve-cond;
         color: $main-black;
         font-size: 14px;
+        margin: 0;
         margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: 0;
       }
 
       p {
-        max-width: 420px;
+        max-width: 415px;
         margin-left: auto;
         margin-right: 0;
-        font-size: 12px;
         color: $main-black;
         line-height: 1.2;
       }

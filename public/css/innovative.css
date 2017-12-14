@@ -19,14 +19,14 @@ section.section-sustain {
       left: 50%;
       transform: translateX(-50%);
 
-      p {
-        flex: 0 1 60%;
-        max-width: 400px;
+      h2 {
+        flex: 0 1 40%;
+        margin-right: 2%;
+      }
 
-        &.bolded {
-          flex: 0 1 40%;
-          font-family: $helve-cond;
-        }
+      p {
+        flex: 0 1 58%;
+        max-width: 400px;
       }
 
     }

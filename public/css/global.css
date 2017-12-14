@@ -151,6 +151,9 @@ h1 {
 h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: $helve-cond;
+  color: $main-black;
+  font-size: 14px;
 }
 
 h3 {
@@ -566,7 +569,6 @@ section.section {
 
         p {
           color: $main-black;
-          font-size: 12px;
         }
       }
     }
