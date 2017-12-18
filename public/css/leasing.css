@@ -311,19 +311,24 @@ section.section-floorplans {
       }
     }
 
+    .lowzone-clicker {
+      left: 8%;
+      bottom: 17.5%;
+      height: 48.7%;
+      width: 83.5%;
+    }
+
     .highzone-clicker {
-      position: absolute;
+      width: 84%;
+      left: 8%;
       height: 20.5%;
       bottom: 65.5%;
     }
 
-    .lowzone-clicker {
-      bottom: 27.8%;
-      height: 37.7%;
-    }
-
     .retail-clicker {
-      height: 27.8%;
+      left: 8%;
+      height: 17.8%;
+      width: 84%;
       bottom: 0;
     }
 
@@ -335,20 +340,20 @@ section.section-floorplans {
     }
 
     .lowzone-img {
-      bottom: 27.8%;
-      left: -4%;
-      width: 99%;
+      bottom: 17.8%;
+      left: 8%;
+      width: 83.5%;
     }
 
     .highzone-img {
-      width: 99%;
-      left: -4%;
+      width: 84%;
+      left: 8%;
       bottom: 65.5%;
     }
 
     .retailzone-img {
-      width: 104%;
-      left: -4%;
+      width: 88%;
+      left: 8%;
       bottom: 0;
     }
   }

@@ -349,10 +349,9 @@ figure {
 .mobile-navigation-list {
   position: absolute;
   top: 0;
-  left: 0;
-  height: 100vh;
-  width: 80%;
   left: 20%;
+  width: 80%;
+  height: 100vh;
   background-color: $main-lightBlue;
   z-index: -1;
   display: flex;
@@ -791,6 +790,7 @@ section.section {
 
   .section-strip {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -971,6 +971,10 @@ footer.section-footer {
 
       &.narrow-strip {
         min-height: 190px;
+      }
+
+      .section-words {
+        margin-top: 20px;
       }
 
       .offcenter-panel {
