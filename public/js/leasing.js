@@ -94,6 +94,7 @@ function dragMoveListener (event) {
   target.style.webkitTransform = `translateX(${x}px)`;
   target.style.transform = `translateX(${x}px)`;
 
+  clipImg.style.webkitClipPath = `inset(0 0 0 ${insetDistance}px)`
   clipImg.style.clipPath = `inset(0 0 0 ${insetDistance}px)`
   target.setAttribute('data-x', x);
 }

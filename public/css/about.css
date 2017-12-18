@@ -1,5 +1,15 @@
 @import 'global';
 
+section.section {
+  .full-width-video {
+    display: block;
+  }
+
+  .full-width-hero {
+    display: none;
+  }
+}
+
 section.section-connect {
   .connect-content {
     position: absolute;
@@ -613,13 +623,25 @@ section.section-assurance {
 }
 
 @media (max-width: 768px) {
+  section.section {
+    .full-width-video {
+      display: none;
+    }
+
+    .full-width-hero {
+      display: block;
+    }
+  }
+
   section.section-connect {
     .connect-content {
       position: relative;
       padding: 0 40px 40px;
     }
 
-    .connect-map {}
+    .connect-map {
+      transform: scale(2) translateX(-25%);
+    }
   }
 
   section.section-connect {

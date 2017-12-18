@@ -351,7 +351,7 @@ figure {
   top: 0;
   left: 20%;
   width: 80%;
-  height: 100vh;
+  height: 100%;
   background-color: $main-lightBlue;
   z-index: -1;
   display: flex;
@@ -363,11 +363,13 @@ figure {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 110%;
-    transform: translateX(30%);
+    width: 100%;
   }
 
   .mobile-nav-list {
+    position: relative;
+    z-index: 10;
+
     ul {
       list-style: none;
 
