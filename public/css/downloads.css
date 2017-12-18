@@ -94,9 +94,10 @@
 }
 
 @media (max-width: 768px) {
-  .section-downloads {
+  section.section-downloads {
     .section-strip {
       .offcenter-panel {
+        width: 100%;
       }
     }
 
