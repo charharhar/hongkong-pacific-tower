@@ -282,6 +282,7 @@ section.section-floorplans {
     .building-outline-img {
       position: relative;
       z-index: 1;
+      width: 100%;
     }
 
     .highzone-clicker,
@@ -476,6 +477,78 @@ section.section-testplans {
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section.section .section-strip-thin {
+    width: 100%;
+  }
+
+  section.section-about {
+    .about-numbers {
+      flex-flow: column wrap;
+    }
+  }
+
+  section.section-floorplans {
+    .building-section {
+      width: 100%;
+    }
+
+    .building-legend {
+      margin-right: 20px;
+    }
+
+    .building-wrapper {
+      .building-outline-img {
+        width: 160px;
+      }
+    }
+
+    .floorplan-showcase {
+      position: relative;
+      width: auto;
+      margin: 40px 20px;
+
+      .floorplan-header {
+        flex-flow: column wrap;
+      }
+
+      .hz-wrapper,
+      .lz-wrapper,
+      .rc-wrapper {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  section.section-testplans {
+    .scenario-wrapper {
+      width: auto;
+      margin: 0 20px;
+
+      .scenario-change-wrapper {
+        flex: 0 1 100%;
+
+        .scenario-one,
+        .scenario-two {
+          h1 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .testfitWrapper {
+      width: auto;
+      margin: 40px 20px;
+
+      .testfit-interact figure.draghint-img {
+        width: 25px;
+        left: 5px;
+      }
     }
   }
 }
