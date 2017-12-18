@@ -1,10 +1,18 @@
 
 import '../css/about.css';
-import { hotReload, slickHelper } from './util.js'
+import { hotReload, slickHelper, mobileNavHandler } from './util.js'
 
 window.addEventListener('load', function() {
   slickHelper('#about-second-slider');
 })
+
+/**
+ * MOBILE NAV HANDLER
+ */
+const hamburger = document.querySelector('.hamburger');
+const mobileNavList = document.querySelector('.mobile-nav-list');
+
+mobileNavHandler(hamburger, mobileNavList);
 
 /**
  * WAYPOINT HANDLER

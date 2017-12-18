@@ -1,6 +1,6 @@
 
 import '../css/home.css';
-import { hotReload } from './util.js'
+import { hotReload, mobileNavHandler } from './util.js'
 
 function isScrolledIntoView(el) {
   const elemTop = el.getBoundingClientRect().top;
@@ -15,6 +15,17 @@ function isScrolledIntoView(el) {
   )
 }
 
+/**
+ * MOBILE NAV HANDLER
+ */
+const hamburger = document.querySelector('.hamburger');
+const mobileNavList = document.querySelector('.mobile-nav-list');
+
+mobileNavHandler(hamburger, mobileNavList);
+
+/**
+ * WAYPOINT HANDLER
+ */
 const squareNavContainer = document.querySelector('#squareNavContainer');
 
 window.addEventListener('scroll', function() {
@@ -24,9 +35,16 @@ window.addEventListener('scroll', function() {
 })
 
 window.addEventListener('load', function() {
+  const topLeftSquare = document.querySelector('#topLeftSquare')
+  const botLeftSquare = document.querySelector('#botLeftSquare')
+  const topRightSquare = document.querySelector('#topRightSquare')
+  const botRightSquare = document.querySelector('#botRightSquare')
+  const topBorder = document.querySelector('#topBorder')
+  const bottomBorder = document.querySelector('#bottomBorder')
+
   function calculateSpace() {
     const spaceBetween = topRightSquare.getBoundingClientRect().left - topLeftSquare.getBoundingClientRect().right;
-    const actualHeight = topRightSquare.getBoundingClientRect().bottom - topLeftSquare.getBoundingClientRect().top;
+    const actualHeight = topLeftSquare.clientHeight + (topLeftSquare.clientHeight * .2);
     const actualWidth = spaceBetween * .8;
     const extraMargin = (spaceBetween * .1);
 
@@ -36,13 +54,6 @@ window.addEventListener('load', function() {
     bottomBorder.style.width = `${actualWidth}px`
     bottomBorder.style.right = `-${spaceBetween - extraMargin}px`
   }
-
-  const topLeftSquare = document.querySelector('#topLeftSquare')
-  const botLeftSquare = document.querySelector('#botLeftSquare')
-  const topRightSquare = document.querySelector('#topRightSquare')
-  const botRightSquare = document.querySelector('#botRightSquare')
-  const topBorder = document.querySelector('#topBorder')
-  const bottomBorder = document.querySelector('#bottomBorder')
 
   calculateSpace();
 

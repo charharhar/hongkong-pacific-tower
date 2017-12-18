@@ -22,152 +22,197 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <link rel="stylesheet" href="<%= assetsMap.downloads.css %>"> -->
-    <link rel="stylesheet" href="/css/downloads.css">
+    <link rel="stylesheet" href="<%= assetsMap.downloads.css %>">
+    <!-- <link rel="stylesheet" href="/css/downloads.css"> -->
 
 </head>
 <body>
+    <div class="mobile-navigation-list">
+        <figure class="mobile-nav-image">
+            <img src="/images/innovative/slider-3.png" alt="">
+        </figure>
+
+        <div class="mobile-nav-list">
+            <ul>
+                <li>
+                    <a class="campWhite navLink" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/about">About The Building</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/leasing">Leasing</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/innovative">Innovative Design</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/downloads">Downloads</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="wrapper">
-        <section class="section section-main">
-            <nav class="main-navigation hasShadow">
-                <div class="navigation-logo-wrapper">
-                    <a href="/">
-                        <figure class="heading-logo-image">
-                            <img src="/images/header/hkpt-logo.png" alt="">
+        <div class="mobile-navigation">
+            <div class="navigation-logo-wrapper">
+                <a href="/">
+                    <figure class="heading-logo-image">
+                        <img src="/images/header/hkpt-logo.png" alt="">
+                    </figure>
+                </a>
+            </div>
+
+            <button class="hamburger hamburger--elastic">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="mobileScrollHelper">
+            <section class="section section-main">
+                <nav class="main-navigation hasShadow">
+                    <div class="navigation-logo-wrapper">
+                        <a href="/">
+                            <figure class="heading-logo-image">
+                                <img src="/images/header/hkpt-logo.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="navigation-list-wrapper">
+                        <ul>
+                            <li>
+                                <a class="campWhite navLink" href="/about">About The Building</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/leasing">Leasing</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/innovative">Innovative Design</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/downloads">Downloads</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="responsive-width-hero">
+                    <figure>
+                        <img src="/images/downloads_hero.png" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="section section-downloads">
+                <div class="section-strip super-slim-strip">
+                    <div class="offcenter-panel offleft">
+                        <div class="special-heading left-bar">
+                            <div class="heading-bar"></div>
+                            <h1 class="heading-text">Downloads</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-wrapper">
+                    <div class="downloads-content">
+                        <div class="downloads-header">
+                            <h2>Floor Plans</h2>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>High Floors <span class="cursive">(21th - 26th floor)</span></p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/floorplan_highzone.jpg" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>Low Floors <span class="cursive">(8th - 20th floor)</span></p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/floorplan_lowzone.jpg" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>Retail &amp; Catering Floors <span class="cursive">(1st - 7th floor)</span></p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/floorplan_retail.zip" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>Test Fit Guides</p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/testfit_plans.zip" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="downloads-content">
+                        <div class="downloads-header">
+                            <h2>HKPT Materials</h2>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>HKPT Overview Booklet</p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="downloads-row">
+                            <p>HKPT 2017 Q4 Pamphlet</p>
+
+                            <div class="downloads-link">
+                                <a href="/assets/" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="section-footer">
+                <div class="footer-left">
+                    <a href="http://www.hkpi.com.hk/en-us/properties/leasing/nkil-6311-klb" target="_blank">
+                        <figure class="footer-hkpt">
+                            <img src="/images/hkpt-logo-white.png" alt="">
                         </figure>
                     </a>
                 </div>
 
-                <div class="navigation-list-wrapper">
-                    <ul>
-                        <li>
-                            <a class="campWhite navLink" href="/about">About The Building</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/leasing">Leasing</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/innovative">Innovative Design</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/downloads">Downloads</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/contact">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="responsive-width-hero">
-                <figure>
-                    <img src="/images/downloads_hero.png" alt="">
-                </figure>
-            </div>
-        </section>
-
-        <section class="section section-downloads">
-            <div class="section-strip super-slim-strip">
-                <div class="offcenter-panel offleft">
-                    <div class="special-heading left-bar">
-                        <div class="heading-bar"></div>
-                        <h1 class="heading-text">Downloads</h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="downloads-wrapper">
-                <div class="downloads-content">
-                    <div class="downloads-header">
-                        <h2>Floor Plans</h2>
-                    </div>
-
-                    <div class="downloads-row">
-                        <p>High Floors <span class="cursive">(21th - 26th floor)</span></p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/floorplan_highzone.jpg" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="downloads-row">
-                        <p>Low Floors <span class="cursive">(8th - 20th floor)</span></p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/floorplan_lowzone.jpg" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="downloads-row">
-                        <p>Retail &amp; Catering Floors <span class="cursive">(1st - 7th floor)</span></p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/floorplan_retail.zip" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="downloads-row">
-                        <p>Test Fit Guides</p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/testfit_plans.zip" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+                <div class="footer-center">
+                    <p class="footer-heading">Defining excellence in build quality</p>
+                    <p class="footer-copyright">&copy; Hong Kong Pacific Tower. 2017 All Rights Reserved.</p>
                 </div>
 
-                <div class="downloads-content">
-                    <div class="downloads-header">
-                        <h2>HKPT Materials</h2>
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a target="_blank" href="https://www.facebook.com/HongkongPacificTower"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/hong-kong-pacific-investment-limited/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="downloads-row">
-                        <p>HKPT Overview Booklet</p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="downloads-row">
-                        <p>HKPT 2017 Q4 Pamphlet</p>
-
-                        <div class="downloads-link">
-                            <a href="/assets/" download><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+                    <a href="http://www.hkpi.com.hk/en-us" target="_blank">
+                        <figure class="footer-hkpi">
+                            <img src="/images/hkpi-logo-white.png" alt="">
+                        </figure>
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <footer class="section-footer">
-            <div class="footer-left">
-                <a href="http://www.hkpi.com.hk/en-us/properties/leasing/nkil-6311-klb" target="_blank">
-                    <figure class="footer-hkpt">
-                        <img src="/images/hkpt-logo-white.png" alt="">
-                    </figure>
-                </a>
-            </div>
-
-            <div class="footer-center">
-                <p class="footer-heading">Defining excellence in build quality</p>
-                <p class="footer-copyright">&copy; Hong Kong Pacific Tower. 2017 All Rights Reserved.</p>
-            </div>
-
-            <div class="footer-right">
-                <div class="footer-socials">
-                    <a target="_blank" href="https://www.facebook.com/HongkongPacificTower"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/hong-kong-pacific-investment-limited/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </div>
-
-                <a href="http://www.hkpi.com.hk/en-us" target="_blank">
-                    <figure class="footer-hkpi">
-                        <img src="/images/hkpi-logo-white.png" alt="">
-                    </figure>
-                </a>
-            </div>
-        </footer>
-
+            </footer>
+        </div>
     </div>
 
     <script
@@ -175,7 +220,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <!-- <script src="<%= assetsMap.downloads.js %>"></script> -->
-    <script src="/js/downloads.js"></script>
+    <script src="<%= assetsMap.downloads.js %>"></script>
+    <!-- <script src="/js/downloads.js"></script> -->
 </body>
 </html>

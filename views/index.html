@@ -22,214 +22,259 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <link rel="stylesheet" href="<%= assetsMap.home.css %>"> -->
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="<%= assetsMap.home.css %>">
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
 
 </head>
 <body>
+    <div class="mobile-navigation-list">
+        <figure class="mobile-nav-image">
+            <img src="/images/innovative/slider-3.png" alt="">
+        </figure>
+
+        <div class="mobile-nav-list">
+            <ul>
+                <li>
+                    <a class="campWhite navLink" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/about">About The Building</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/leasing">Leasing</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/innovative">Innovative Design</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/downloads">Downloads</a>
+                </li>
+                <li>
+                    <a class="campWhite navLink" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="wrapper">
-        <section class="section section-main">
-            <nav class="main-navigation">
-                <div class="navigation-logo-wrapper">
-                    <a href="/">
-                        <figure class="heading-logo-image">
-                            <img src="/images/header/hkpt-logo.png" alt="">
+        <div class="mobile-navigation">
+            <div class="navigation-logo-wrapper">
+                <a href="/">
+                    <figure class="heading-logo-image">
+                        <img src="/images/header/hkpt-logo.png" alt="">
+                    </figure>
+                </a>
+            </div>
+
+            <button class="hamburger hamburger--elastic">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="mobileScrollHelper">
+            <section class="section section-main">
+                <nav class="main-navigation">
+                    <div class="navigation-logo-wrapper">
+                        <a href="/">
+                            <figure class="heading-logo-image">
+                                <img src="/images/header/hkpt-logo.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="navigation-list-wrapper">
+                        <ul>
+                            <li>
+                                <a class="campWhite navLink" href="/about">About The Building</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/leasing">Leasing</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/innovative">Innovative Design</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/downloads">Downloads</a>
+                            </li>
+                            <li>
+                                <a class="campWhite navLink" href="/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="full-width-hero">
+                    <figure>
+                        <img src="/images/homepage_hero.jpg" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="section section-blocks">
+                <div class="section-strip">
+                    <div class="blueHeading">
+                        <h1 class="heading-text"><span class="bolded">A brand new start</span> / built for a better tomorrow</h1>
+                    </div>
+                </div>
+
+                <div class="squareNav-container" id="squareNavContainer">
+                    <div class="squareNav-squares">
+                        <div class="squareNav" id="topLeftSquare">
+                            <a class="squareContent" href="/about">
+                                <figure class="squareImg">
+                                    <img src="/images/homepage_aboutthebuilding.jpg" alt="">
+                                </figure>
+                                <span class="squareNav-text">About<br>the building</span>
+                            </a>
+                            <div class="squareBorder patterned-bar" id="topBorder">
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="accent-wrapper">
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="squareNav" id="topRightSquare">
+                            <a class="squareContent" href="/leasing">
+                                <figure class="squareImg">
+                                    <img src="/images/homepage_leasing.jpg" alt="">
+                                </figure>
+                                <span class="squareNav-text">Leasing</span>
+                            </a>
+                        </div>
+
+                        <div class="squareNav" id="botLeftSquare">
+                            <a class="squareContent" href="/innovative">
+                                <figure class="squareImg">
+                                    <img src="/images/homepage_innovativedesign.jpg" alt="">
+                                </figure>
+                                <span class="squareNav-text">innovative<br>design</span>
+                            </a>
+                            <div class="squareBorder patterned-bar" id="bottomBorder">
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="bar-pattern reverse"></div>
+                                <div class="bar-pattern normal"></div>
+                                <div class="accent-wrapper">
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                    <div class="accent-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="squareNav" id="botRightSquare">
+                            <a class="squareContent" href="/downloads">
+                                <figure class="squareImg">
+                                    <img src="/images/homepage_downloads.jpg" alt="">
+                                </figure>
+                                <span class="squareNav-text">downloads</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="section section-tenants">
+                <div class="center-wrapper">
+                    <div class="special-heading left-bar">
+                        <h1 class="heading-text">our<br>tenants</h1>
+                    </div>
+
+                    <div class="tenants-wrapper">
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+
+                        <div class="tenant-container">
+                            <figure class="tenant-img"></figure>
+                            <p class="tenant-text">CLIENT LOGO</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <br>
+            <br>
+            <br>
+
+            <footer class="section-footer">
+                <div class="footer-left">
+                    <a href="http://www.hkpi.com.hk/en-us/properties/leasing/nkil-6311-klb" target="_blank">
+                        <figure class="footer-hkpt">
+                            <img src="/images/hkpt-logo-white.png" alt="">
                         </figure>
                     </a>
                 </div>
 
-                <div class="navigation-list-wrapper">
-                    <ul>
-                        <li>
-                            <a class="campWhite navLink" href="/about">About The Building</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/leasing">Leasing</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/innovative">Innovative Design</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/downloads">Downloads</a>
-                        </li>
-                        <li>
-                            <a class="campWhite navLink" href="/contact">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="full-width-hero">
-                <figure>
-                    <img src="/images/homepage_hero.jpg" alt="">
-                </figure>
-            </div>
-        </section>
-
-        <section class="section section-blocks">
-            <div class="section-strip">
-                <div class="blueHeading">
-                    <h1 class="heading-text"><span class="bolded">A brand new start</span> / built for a better tomorrow</h1>
-                </div>
-            </div>
-
-            <div class="squareNav-container" id="squareNavContainer">
-                <div class="squareNav-squares">
-                    <div class="squareNav" id="topLeftSquare">
-                        <a class="squareContent" href="/about">
-                            <figure class="squareImg">
-                                <img src="/images/homepage_aboutthebuilding.jpg" alt="">
-                            </figure>
-                            <span class="squareNav-text">About<br>the building</span>
-                        </a>
-                        <div class="squareBorder patterned-bar" id="topBorder">
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="accent-wrapper">
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="squareNav" id="topRightSquare">
-                        <a class="squareContent" href="/leasing">
-                            <figure class="squareImg">
-                                <img src="/images/homepage_leasing.jpg" alt="">
-                            </figure>
-                            <span class="squareNav-text">Leasing</span>
-                        </a>
-                    </div>
-
-                    <div class="squareNav" id="botLeftSquare">
-                        <a class="squareContent" href="/innovative">
-                            <figure class="squareImg">
-                                <img src="/images/homepage_innovativedesign.jpg" alt="">
-                            </figure>
-                            <span class="squareNav-text">innovative<br>design</span>
-                        </a>
-                        <div class="squareBorder patterned-bar" id="bottomBorder">
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="bar-pattern reverse"></div>
-                            <div class="bar-pattern normal"></div>
-                            <div class="accent-wrapper">
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                                <div class="accent-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="squareNav" id="botRightSquare">
-                        <a class="squareContent" href="/downloads">
-                            <figure class="squareImg">
-                                <img src="/images/homepage_downloads.jpg" alt="">
-                            </figure>
-                            <span class="squareNav-text">downloads</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- <section class="section section-tenants">
-            <div class="center-wrapper">
-                <div class="special-heading left-bar">
-                    <h1 class="heading-text">our<br>tenants</h1>
+                <div class="footer-center">
+                    <p class="footer-heading">Defining excellence in build quality</p>
+                    <p class="footer-copyright">&copy; Hong Kong Pacific Tower. 2017 All Rights Reserved.</p>
                 </div>
 
-                <div class="tenants-wrapper">
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a target="_blank" href="https://www.facebook.com/HongkongPacificTower"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/hong-kong-pacific-investment-limited/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
-
-                    <div class="tenant-container">
-                        <figure class="tenant-img"></figure>
-                        <p class="tenant-text">CLIENT LOGO</p>
-                    </div>
+                    <a href="http://www.hkpi.com.hk/en-us" target="_blank">
+                        <figure class="footer-hkpi">
+                            <img src="/images/hkpi-logo-white.png" alt="">
+                        </figure>
+                    </a>
                 </div>
-            </div>
-        </section> -->
-
-        <br>
-        <br>
-        <br>
-
-        <footer class="section-footer">
-            <div class="footer-left">
-                <a href="http://www.hkpi.com.hk/en-us/properties/leasing/nkil-6311-klb" target="_blank">
-                    <figure class="footer-hkpt">
-                        <img src="/images/hkpt-logo-white.png" alt="">
-                    </figure>
-                </a>
-            </div>
-
-            <div class="footer-center">
-                <p class="footer-heading">Defining excellence in build quality</p>
-                <p class="footer-copyright">&copy; Hong Kong Pacific Tower. 2017 All Rights Reserved.</p>
-            </div>
-
-            <div class="footer-right">
-                <div class="footer-socials">
-                    <a target="_blank" href="https://www.facebook.com/HongkongPacificTower"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/hong-kong-pacific-investment-limited/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </div>
-
-                <a href="http://www.hkpi.com.hk/en-us" target="_blank">
-                    <figure class="footer-hkpi">
-                        <img src="/images/hkpi-logo-white.png" alt="">
-                    </figure>
-                </a>
-            </div>
-        </footer>
-
+            </footer>
+        </div>
     </div>
 
     <script
@@ -237,7 +282,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <!-- <script src="<%= assetsMap.home.js %>"></script> -->
-    <script src="/js/home.js"></script>
+    <script src="<%= assetsMap.home.js %>"></script>
+    <!-- <script src="/js/home.js"></script> -->
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 import '../css/leasing.css';
-import { hotReload, sliceArray, specialSlick } from './util.js'
+import { hotReload, sliceArray, specialSlick, mobileNavHandler } from './util.js'
 import CountUp from 'countup.js'
 import interact from 'interactjs'
 
@@ -9,6 +9,14 @@ window.addEventListener('load', function() {
   // specialSlick('#lowzone-slider');
   specialSlick('#retail-slider');
 })
+
+/**
+ * MOBILE NAV HANDLER
+ */
+const hamburger = document.querySelector('.hamburger');
+const mobileNavList = document.querySelector('.mobile-nav-list');
+
+mobileNavHandler(hamburger, mobileNavList);
 
 const speedNumbers = document.querySelector('.speedNumbers');
 const options = {
