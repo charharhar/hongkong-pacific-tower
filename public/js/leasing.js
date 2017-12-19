@@ -44,12 +44,14 @@ function isScrolledIntoView(el) {
 
 // Clicker for building wrapper
 const floorPlanShowcase = document.querySelector('.floorplan-showcase');
+const mobileBuildingContent = document.querySelector('.mobile-building-content');
 const buildingClicker = sliceArray(document.querySelectorAll('.buildingClicker'));
 
 buildingClicker.forEach(clicker => {
   clicker.addEventListener('click', e => {
     const className = clicker.getAttribute('data-class');
     floorPlanShowcase.className = `floorplan-showcase ${className}`
+    mobileBuildingContent.className = `mobile-building-content ${className}`
   })
 })
 

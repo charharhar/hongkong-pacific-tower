@@ -670,7 +670,6 @@ section.section-assurance {
 
     .connect-map {
       min-height: auto;
-      transform: scale(2) translateX(-25%);
     }
 
     .connect-timetable {
@@ -682,6 +681,10 @@ section.section-assurance {
         margin: 15px 0;
 
         .connect-row {
+          &:first-of-type {
+            padding-bottom: 10px;
+          }
+
           .connect-data {
             &.header {
               order: 2;
