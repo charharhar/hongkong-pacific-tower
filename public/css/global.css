@@ -66,6 +66,8 @@ html, body {
 }
 
 .wrapper {
+  position: relative;
+  z-index: 20;
   background-color: $main-white;
   width: 100%;
   transition: 600ms all cubic-bezier(.25, .1, .25, 1);
@@ -351,7 +353,6 @@ figure {
   width: 80%;
   height: 100%;
   background-color: $main-lightBlue;
-  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
