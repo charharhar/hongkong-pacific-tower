@@ -19,7 +19,7 @@ section.section-connect {
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 0 40px;
+    padding: 0 40px 40px;
     height: 100%;
     width: 100%;
     max-width: 600px;
@@ -46,46 +46,75 @@ section.section-connect {
   }
 
   .connect-timetable {
-    max-width: 500px;
+    display: flex;
 
-    table > tbody > tr {
-      &:not(:first-of-type) {
-        td:nth-of-type(2) {
-          border-right: 3px solid $main-darkBlue;
+    .connect-table {
+      flex: 0 1 50%;
+
+      .connect-row {
+        display: flex;
+        flex-flow: row nowrap;
+
+        .connect-data {
+          white-space: nowrap;
+          text-align: center;
+          font-size: 13px;
+
+          &.header {
+            flex: 0 1 70%;
+            text-align: right;
+            font-weight: bold;
+            padding-left: 0;
+            padding-right: 15px;
+          }
+
+          &.content {
+            flex: 0 1 30%;
+            padding-left: 15px;
+            padding-right: 30px;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
-      td {
-        &:first-of-type,
-        &:last-of-type {
-          text-align: left;
-          font-weight: bold;
-        }
+      &.reversed {
+        .connect-row {
+          &:not(:first-of-type) {
+            .connect-data:nth-of-type(1) {
+              border-left-color: $main-darkBlue;
+            }
+          }
 
-        &:nth-of-type(2) {
-          padding-right: 10px;
-        }
+          .connect-data {
+            &:nth-of-type(1) {
+              border-left-width: 3px;
+              border-left-style: solid;
+            }
 
-        &:nth-of-type(3) {
-          padding-left: 10px;
-        }
+            &.header {
+              text-align: left;
+              padding-right: 0;
+              padding-left: 15px;
+            }
 
-        width: 1%;
-        white-space: nowrap;
-        padding: 0px 5px;
-        text-align: center;
-        font-size: 13px;
-
-        img {
-          width: 20px;
-          height: 20px;
+            &.content {
+              padding-right: 15px;
+              padding-left: 30px;
+            }
+          }
         }
       }
     }
+
   }
 
   .connect-map {
     position: relative;
+    min-height: 600px;
   }
 
   .animation-field {
@@ -640,7 +669,63 @@ section.section-assurance {
     }
 
     .connect-map {
+      min-height: auto;
       transform: scale(2) translateX(-25%);
+    }
+
+    .connect-timetable {
+      flex-flow: row wrap;
+      margin-top: 10px;
+
+      .connect-table {
+        flex: 0 1 100%;
+        margin: 15px 0;
+
+        .connect-row {
+          .connect-data {
+            &.header {
+              order: 2;
+              text-align: left;
+              padding-right: 15px;
+              padding-left: 0;
+            }
+
+            &.content {
+              order: 1;
+              padding-right: 30px;
+              padding-left: 0;
+            }
+          }
+        }
+
+        &.reversed {
+          .connect-row {
+            &:not(:first-of-type) {
+              .connect-data:nth-of-type(1) {
+                border-left-color: transparent;
+              }
+            }
+
+            .connect-data {
+              &:nth-of-type(1) {
+                border-left-width: 0;
+              }
+
+              &.header {
+                order: 2;
+                padding-right: 15px;
+                padding-left: 0;
+              }
+
+              &.content {
+                order: 1;
+                padding-right: 30px;
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

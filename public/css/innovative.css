@@ -130,6 +130,8 @@ section.section-concept {
       }
 
       .inno-slider1-bg {
+        opacity: .3;
+        transform: translate(30%, 10%);
       }
 
       .inno-slider3-bg {
@@ -235,6 +237,21 @@ footer.section-footer {
         .innovative-slide {
           flex-flow: row wrap;
 
+          .inno-slider1-bg,
+          .inno-slider3-bg {
+            top: auto;
+            max-width: none;
+            bottom: 0;
+            right: 0;
+            left: auto;
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
           h1 {
             font-size: 24px;
           }
@@ -247,6 +264,9 @@ footer.section-footer {
 
         &.sliderArrows {
           .slick-arrow {
+            display: block;
+            height: auto;
+
             &.slick-next {
               right: 15px;
             }
@@ -306,6 +326,7 @@ footer.section-footer {
 
   section.section-certif {
     .certif-logo-wrapper {
+      padding-left: 0;
       margin-bottom: 0;
       margin-top: 20px;
 

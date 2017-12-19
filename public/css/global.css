@@ -71,7 +71,6 @@ html, body {
   transition: 600ms all cubic-bezier(.25, .1, .25, 1);
   box-shadow: 0 0 20px rgba(0, 0, 0, .7);
   margin-top: 0;
-  margin-bottom: 0;
 
   .mobileScrollHelper {
     transform: translateY(0);
@@ -86,7 +85,6 @@ html, body {
       position: absolute;
       transform: translate(-80%, 0);
       margin-top: 10%;
-      margin-bottom: 10%;
       max-height: 90%;
       overflow: hidden;
     }
