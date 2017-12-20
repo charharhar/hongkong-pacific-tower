@@ -1,6 +1,6 @@
 
 import '../css/home.css';
-import { hotReload, mobileNavHandler } from './util.js'
+import { hotReload, mobileNavHandler, footerCopyrightYear } from './util.js'
 
 function isScrolledIntoView(el) {
   const elemTop = el.getBoundingClientRect().top;
@@ -14,6 +14,12 @@ function isScrolledIntoView(el) {
     elemBottom >= 0
   )
 }
+
+/**
+ * DYNAMIC FOOTER YEAR
+ */
+const footerYear = document.querySelector('#footerYear');
+footerCopyrightYear(footerYear);
 
 /**
  * MOBILE NAV HANDLER

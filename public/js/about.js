@@ -1,6 +1,6 @@
 
 import '../css/about.css';
-import { hotReload, slickHelper, mobileNavHandler } from './util.js'
+import { hotReload, slickHelper, mobileNavHandler, footerCopyrightYear } from './util.js'
 
 window.addEventListener('load', function() {
   slickHelper('#about-second-slider');
@@ -13,6 +13,12 @@ const hamburger = document.querySelector('.hamburger');
 const mobileNavList = document.querySelector('.mobile-nav-list');
 
 mobileNavHandler(hamburger, mobileNavList);
+
+/**
+ * DYNAMIC FOOTER YEAR
+ */
+const footerYear = document.querySelector('#footerYear');
+footerCopyrightYear(footerYear);
 
 /**
  * WAYPOINT HANDLER

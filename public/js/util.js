@@ -99,3 +99,7 @@ export function scrollTo(e, elem) {
     scrollTop: $(target).offset().top
   }, 1000);
 }
+
+export function footerCopyrightYear(target) {
+  target.innerHTML = new Date().getFullYear();
+}

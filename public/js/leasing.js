@@ -1,6 +1,6 @@
 
 import '../css/leasing.css';
-import { hotReload, sliceArray, specialSlick, mobileNavHandler } from './util.js'
+import { hotReload, sliceArray, specialSlick, mobileNavHandler, footerCopyrightYear } from './util.js'
 import CountUp from 'countup.js'
 import interact from 'interactjs'
 
@@ -9,6 +9,12 @@ window.addEventListener('load', function() {
   // specialSlick('#lowzone-slider');
   specialSlick('#retail-slider');
 })
+
+/**
+ * DYNAMIC FOOTER YEAR
+ */
+const footerYear = document.querySelector('#footerYear');
+footerCopyrightYear(footerYear);
 
 /**
  * MOBILE NAV HANDLER
