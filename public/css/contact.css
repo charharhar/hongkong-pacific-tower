@@ -142,10 +142,11 @@
 @media (max-width: 768px) {
   .section-contact {
     .center-wrapper {
-      margin: 40px auto;
+      margin: 40px 0 40px 50px;
+      padding: 0 25px;
+      width: 100%;
 
       .contact-wrapper {
-        padding-left: 10px;
         .silver-bar {
           display: none;
         }

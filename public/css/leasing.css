@@ -511,7 +511,7 @@ section.section-testplans {
 
 @media (max-width: 768px) {
   section.section .section-strip-thin {
-    width: 100%;
+    width: 90%;
   }
 
   section.section-about {

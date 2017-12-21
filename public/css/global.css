@@ -817,7 +817,7 @@ section.section {
 
       .offcenter-sixty {
         display: flex;
-        flex: 0 1 60%;
+        flex: 0 1 66.666%;
         max-width: 400px;
         margin-left: auto;
       }
@@ -982,6 +982,8 @@ footer.section-footer {
     }
 
     .special-heading {
+      margin-bottom: 15px;
+
       h1 {
         font-size: 32px;
       }
@@ -992,9 +994,14 @@ footer.section-footer {
       min-height: 200px;
       padding: 40px 20px;
 
+      &.mobile-left {
+        justify-content: flex-start;
+      }
+
       &.narrow-strip {
         min-height: 190px;
         justify-content: center;
+        padding: 40px 0;
       }
 
       .section-words {
@@ -1002,10 +1009,11 @@ footer.section-footer {
       }
 
       .offcenter-panel {
-        width: 66.666%;
+        width: 100%;
+        padding: 0 25px;
 
-        &.offleft { justify-content: center; }
-        &.offright { justify-content: center; }
+        &.offleft { justify-content: flex-start; }
+        &.offright { justify-content: flex-start; }
 
         .offcenter-sixty {
           margin-left: 0;

@@ -91,6 +91,9 @@ section.section-concept {
     &.sliderArrows {
       .slick-arrow {
         z-index: 100;
+        width: 35px;
+        height: 80px;
+
         &:before {
           display: none;
         }
@@ -152,6 +155,7 @@ section.section-concept {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         flex: 0 1 45%;
         position: relative;
         z-index: 1;
@@ -163,13 +167,14 @@ section.section-concept {
         font-weight: 600;
         color: $main-black;
         margin-bottom: 25px;
+        width: 400px;
         span.white {
           color: $main-white;
         }
       }
 
       p {
-        max-width: 400px;
+        width: 400px;
       }
 
       &.inno-slide1 {
@@ -256,6 +261,15 @@ footer.section-footer {
             font-size: 24px;
           }
 
+          h1, p {
+            width: auto;
+          }
+
+          .slide-words {
+            padding: 0 25px;
+            align-items: flex-start;
+          }
+
           .slide-words,
           .slide-images {
             flex: 0 1 100%;
@@ -266,6 +280,7 @@ footer.section-footer {
           .slick-arrow {
             display: block;
             height: auto;
+            width: auto;
 
             &.slick-next {
               right: 15px;
@@ -291,7 +306,10 @@ footer.section-footer {
 
     .sustain-wrapper {
       .section-words {
+        justify-content: flex-start;
         flex-flow: row wrap;
+        width: 100%;
+        padding: 0 25px;
 
         h2,
         p {
@@ -325,6 +343,14 @@ footer.section-footer {
   }
 
   section.section-certif {
+    .flex-container {
+      width: 100%;
+    }
+
+    .section-strip .section-words {
+      flex: 0 1 100%;
+    }
+
     .certif-logo-wrapper {
       padding-left: 0;
       margin-bottom: 0;

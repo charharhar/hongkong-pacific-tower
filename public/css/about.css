@@ -115,6 +115,7 @@ section.section-connect {
   .connect-map {
     position: relative;
     min-height: 600px;
+    margin-left: auto;
   }
 
   .animation-field {
@@ -665,7 +666,7 @@ section.section-assurance {
   section.section-connect {
     .connect-content {
       position: relative;
-      padding: 0 40px 40px;
+      padding: 0 25px 40px;
     }
 
     .connect-map {
@@ -756,6 +757,9 @@ section.section-assurance {
 
       .section-content {
         position: relative;
+        width: 100%;
+        padding: 0 25px;
+        justify-content: flex-start;
       }
 
       .assurance-building {
