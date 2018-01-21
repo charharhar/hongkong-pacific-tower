@@ -45,6 +45,14 @@ section.section-connect {
     }
   }
 
+  .connect-table-wrapper {
+    margin-top: 25px;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
   .connect-timetable {
     display: flex;
 
@@ -61,7 +69,7 @@ section.section-connect {
           font-size: 13px;
 
           &.header {
-            flex: 0 1 70%;
+            flex: 0 1 75%;
             text-align: right;
             font-weight: bold;
             padding-left: 0;
@@ -69,7 +77,7 @@ section.section-connect {
           }
 
           &.content {
-            flex: 0 1 30%;
+            flex: 0 1 25%;
             padding-left: 15px;
             padding-right: 30px;
           }
@@ -671,32 +679,43 @@ section.section-assurance {
 
     .connect-map {
       min-height: auto;
+      transform: scale(1.8) translate(-21%, 7%);
     }
 
     .connect-timetable {
       flex-flow: row wrap;
-      margin-top: 10px;
+      margin: 10px auto 0;
 
       .connect-table {
-        flex: 0 1 100%;
+        flex: 0 1 auto;
         margin: 15px 0;
 
         .connect-row {
-          &:first-of-type {
-            padding-bottom: 10px;
+          &:not(:first-of-type) {
+            height: 16px;
+          }
+
+          &:nth-of-type(1) {
+            .connect-data.content {
+              padding-left: 13px;
+            }
           }
 
           .connect-data {
             &.header {
               order: 2;
               text-align: left;
-              padding-right: 15px;
+              padding-right: 10px;
               padding-left: 0;
+
+              &.mobileHidden {
+                display: none;
+              }
             }
 
             &.content {
               order: 1;
-              padding-right: 30px;
+              padding-right: 10px;
               padding-left: 0;
             }
           }
@@ -706,25 +725,31 @@ section.section-assurance {
           .connect-row {
             &:not(:first-of-type) {
               .connect-data:nth-of-type(1) {
-                border-left-color: transparent;
+                // border-left-color: transparent;
+              }
+            }
+
+            &:nth-of-type(1) {
+              .connect-data.content {
+                padding-left: 28px;
               }
             }
 
             .connect-data {
               &:nth-of-type(1) {
-                border-left-width: 0;
+                // border-left-width: 0;
               }
 
               &.header {
                 order: 2;
-                padding-right: 15px;
+                padding-right: 10px;
                 padding-left: 0;
               }
 
               &.content {
                 order: 1;
-                padding-right: 30px;
-                padding-left: 0;
+                padding-right: 15px;
+                padding-left: 15px;
               }
             }
           }
@@ -765,6 +790,16 @@ section.section-assurance {
       .assurance-building {
         width: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  section.section-connect .connect-content {
+    padding: 0 5px 40px;
+
+    .connect-words {
+      padding: 0 20px;
     }
   }
 }

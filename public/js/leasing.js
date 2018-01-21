@@ -5,8 +5,8 @@ import CountUp from 'countup.js'
 import interact from 'interactjs'
 
 window.addEventListener('load', function() {
-  // specialSlick('#highzone-slider');
-  // specialSlick('#lowzone-slider');
+  specialSlick('#highzone-slider');
+  specialSlick('#lowzone-slider');
   specialSlick('#retail-slider');
 })
 
