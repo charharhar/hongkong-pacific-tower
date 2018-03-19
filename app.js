@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const logger = require('morgan');
 const compression = require('compression');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const appRootDir = require('app-root-dir');
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -46,8 +47,12 @@ app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.set('port', port);
-app.set('views', path.resolve(appRootDir.get(), 'views'));
+app.set('views', [
+  path.resolve(appRootDir.get(), 'en'),
+  path.resolve(appRootDir.get(), 'zh'),
+]);
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/', express.static('build'))
@@ -81,27 +86,27 @@ const assetsMap = JSON.parse(fs.readFileSync(assetsFilePath, 'utf8'));
  * Primary app routes.
  */
 app.get('/', (req, res) => {
-  homeController.index(req, res, assetsMap);
+  homeController.index(req, res, assetsMap, req.cookies);
 });
 
 app.get('/leasing', (req, res) => {
-  leasingController.index(req, res, assetsMap);
+  leasingController.index(req, res, assetsMap, req.cookies);
 });
 
 app.get('/about', (req, res) => {
-  aboutController.index(req, res, assetsMap);
+  aboutController.index(req, res, assetsMap, req.cookies);
 });
 
 app.get('/innovative', (req, res) => {
-  innovativeController.index(req, res, assetsMap);
+  innovativeController.index(req, res, assetsMap, req.cookies);
 });
 
 app.get('/contact', (req, res) => {
-  contactController.index(req, res, assetsMap);
+  contactController.index(req, res, assetsMap, req.cookies);
 });
 
 app.get('/downloads', (req, res) => {
-  downloadsController.index(req, res, assetsMap);
+  downloadsController.index(req, res, assetsMap, req.cookies);
 });
 
 /**

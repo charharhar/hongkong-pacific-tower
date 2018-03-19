@@ -2,6 +2,8 @@
 import '../css/home.css';
 import { hotReload, mobileNavHandler, footerCopyrightYear } from './util.js'
 
+Cookies.set('hkpt_los', 'en', { expires: 30, path: '/' });
+
 function isScrolledIntoView(el) {
   const elemTop = el.getBoundingClientRect().top;
   const elemBottom = el.getBoundingClientRect().bottom;
