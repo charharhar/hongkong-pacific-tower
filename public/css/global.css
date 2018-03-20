@@ -293,10 +293,13 @@ figure {
     margin-right: -10px;
 
     ul {
+      display: flex;
+      align-items: center;
       list-style: none;
 
       li {
-        display: inline;
+        position: relative;
+        text-align: center;
         margin: 0 12px;
 
         a {
@@ -322,6 +325,35 @@ figure {
             padding: 15px 20px;
             width: 150px;
             border-bottom: 2px solid transparent;
+          }
+        }
+
+        &.locale-wrapper {
+          cursor: pointer;
+
+          &:hover {
+            .locale-list-wrapper {
+              display: flex;
+            }
+          }
+
+          .locale-list-wrapper {
+            position: absolute;
+            min-width: 50px;
+            display: none;
+            flex-flow: column;
+
+            a {
+              text-transform: uppercase;
+              width: 100%;
+              text-align: left;
+              padding: 5px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #f7f7f7;
+              }
+            }
           }
         }
       }
@@ -384,6 +416,12 @@ figure {
           color: $main-white;
           font-family: $helve-cond;
           font-size: 24px;
+
+          &.locale-btn:first-of-type {
+            margin-right: 10px;
+            padding-right: 15px;
+            border-right: 2px solid #fff;
+          }
         }
       }
     }

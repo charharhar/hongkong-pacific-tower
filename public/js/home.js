@@ -1,8 +1,16 @@
 
 import '../css/home.css';
-import { hotReload, mobileNavHandler, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  mobileNavHandler,
+  footerCopyrightYear,
+  initiateLocaleBtns,
+} from './util.js'
 
-Cookies.set('hkpt_los', 'en', { expires: 30, path: '/' });
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
 
 function isScrolledIntoView(el) {
   const elemTop = el.getBoundingClientRect().top;

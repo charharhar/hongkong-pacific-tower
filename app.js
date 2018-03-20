@@ -50,8 +50,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.set('port', port);
 app.set('views', [
-  path.resolve(appRootDir.get(), 'en'),
-  path.resolve(appRootDir.get(), 'zh'),
+  path.resolve(appRootDir.get(), 'views'),
 ]);
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -86,27 +85,27 @@ const assetsMap = JSON.parse(fs.readFileSync(assetsFilePath, 'utf8'));
  * Primary app routes.
  */
 app.get('/', (req, res) => {
-  homeController.index(req, res, assetsMap, req.cookies);
+  homeController.index(req, res, assetsMap);
 });
 
 app.get('/leasing', (req, res) => {
-  leasingController.index(req, res, assetsMap, req.cookies);
+  leasingController.index(req, res, assetsMap);
 });
 
 app.get('/about', (req, res) => {
-  aboutController.index(req, res, assetsMap, req.cookies);
+  aboutController.index(req, res, assetsMap);
 });
 
 app.get('/innovative', (req, res) => {
-  innovativeController.index(req, res, assetsMap, req.cookies);
+  innovativeController.index(req, res, assetsMap);
 });
 
 app.get('/contact', (req, res) => {
-  contactController.index(req, res, assetsMap, req.cookies);
+  contactController.index(req, res, assetsMap);
 });
 
 app.get('/downloads', (req, res) => {
-  downloadsController.index(req, res, assetsMap, req.cookies);
+  downloadsController.index(req, res, assetsMap);
 });
 
 /**

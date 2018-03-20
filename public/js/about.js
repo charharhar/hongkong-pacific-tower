@@ -1,10 +1,26 @@
 
 import '../css/about.css';
-import { hotReload, slickHelper, mobileNavHandler, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  slickHelper,
+  mobileNavHandler,
+  footerCopyrightYear,
+  initiateLocaleBtns,
+} from './util.js'
 
 window.addEventListener('load', function() {
   slickHelper('#about-second-slider');
 })
+
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
+
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
 
 /**
  * MOBILE NAV HANDLER

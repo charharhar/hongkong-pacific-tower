@@ -1,6 +1,16 @@
 
 import '../css/downloads.css';
-import { hotReload, mobileNavHandler, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  mobileNavHandler,
+  footerCopyrightYear,
+  initiateLocaleBtns,
+} from './util.js'
+
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
 
 /**
  * DYNAMIC FOOTER YEAR

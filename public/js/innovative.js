@@ -1,6 +1,17 @@
 
 import '../css/innovative.css';
-import { hotReload, slickHelper, mobileNavHandler, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  slickHelper,
+  mobileNavHandler,
+  footerCopyrightYear,
+  initiateLocaleBtns ,
+} from './util.js'
+
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
 
 /**
  * DYNAMIC FOOTER YEAR

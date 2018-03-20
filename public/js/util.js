@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 
 /**
  * Utility Functions
@@ -57,6 +58,17 @@ export function mobileNavHandler(toggle, mobileNav) {
     }
 
   });
+}
+
+export function initiateLocaleBtns() {
+  const localeBtn = Array.prototype.slice.call(document.querySelectorAll('.locale-btn'))
+
+  localeBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      const locale = e.target.getAttribute('data-locale');
+      Cookies.set('hkpt_los', locale, { expires: 30 });
+    });
+  })
 }
 
 export function hotReload() {

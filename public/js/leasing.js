@@ -1,6 +1,13 @@
 
 import '../css/leasing.css';
-import { hotReload, sliceArray, specialSlick, mobileNavHandler, footerCopyrightYear } from './util.js'
+import {
+  hotReload,
+  sliceArray,
+  specialSlick,
+  mobileNavHandler,
+  footerCopyrightYear,
+  initiateLocaleBtns,
+} from './util.js'
 import CountUp from 'countup.js'
 import interact from 'interactjs'
 
@@ -9,6 +16,11 @@ window.addEventListener('load', function() {
   specialSlick('#lowzone-slider');
   specialSlick('#retail-slider');
 })
+
+/**
+ * INITIATE LOCALE BTN LISTENERS
+ */
+initiateLocaleBtns();
 
 /**
  * DYNAMIC FOOTER YEAR
