@@ -10,38 +10,33 @@ RewriteRule ^ /%1 [NC,L,R=302]
 
 
 
+
+
+
+
+
+
+
 # Turn on RewriteEngine
 RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /en%{REQUEST_URI}.html [NC,L]
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-
-
-
-RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
-
-# Turn on RewriteEngine
-RewriteEngine on
+RewriteCond %{HTTP_COOKIE} hkpt_los=(en|zh) [NC]
+RewriteRule ^ /%2/%1 [NC,L,R=302]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteCond %{HTTP_COOKIE} hkpt_los=(en|zh) [NC]
 RewriteRule ^(.*)$ /%1%{REQUEST_URI}.html [NC,L]
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteCond %{HTTP_COOKIE} hkpt_los=(en|zh) [NC]
-RewriteRule ^ /%2/%1 [NC,L,R=302]
+RewriteRule ^ /en/%1 [NC,L,R=302]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ /en%{REQUEST_URI}.html [NC,L]
 
 
-RewriteRule ^$ /en [R=302,L]
 
 
-Options +MultiViews
-AddLanguage en en
-AddLanguage zh zh
-LanguagePriority en zh
+
 
 
