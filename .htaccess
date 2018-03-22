@@ -1,42 +1,26 @@
 # Turn on RewriteEngine
 RewriteEngine on
 
-# Rewrites URL without file extension
+RewriteCond %{HTTP_COOKIE} !^hkpt_los=(en|zh) [NC]
+RewriteRule ^/?$ /en [NC,L,R=302]
+
+RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
+RewriteRule ^/?$ /%1 [NC,L,R=302]
+
+RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
+RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+RewriteRule ^(.*)$ /%1/$1.html [NC,L,R=302]
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R=302]
-
-
-
-
-
-
-
-
-
-
-# Turn on RewriteEngine
-RewriteEngine on
-
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteCond %{HTTP_COOKIE} hkpt_los=(en|zh) [NC]
-RewriteRule ^ /%2/%1 [NC,L,R=302]
-
+RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
+RewriteCond %{REQUEST_URI} ^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteCond %{HTTP_COOKIE} hkpt_los=(en|zh) [NC]
-RewriteRule ^(.*)$ /%1%{REQUEST_URI}.html [NC,L]
+RewriteRule ^(.*)$ /$1.html [NC,L,R=302]
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /en/%1 [NC,L,R=302]
-
+RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ /en%{REQUEST_URI}.html [NC,L]
+RewriteRule ^(.*)$ /en/$1.html [NC,L,R=302]
 
-
-
-
-
-
-
+RewriteCond %{REQUEST_URI} ^/(?:en|zh) [NC]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ /en/$1.html [NC,L,R=302]
