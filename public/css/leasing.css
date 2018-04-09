@@ -5,6 +5,10 @@
     bottom: -40px;
   }
 
+  .slick-prev, .slick-next {
+    height: 40px;
+  }
+
   .slick-prev.pull-left.slick-arrow,
   .slick-next.pull-right.slick-arrow {
     color: $main-darkBlue;

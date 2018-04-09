@@ -2,25 +2,25 @@
 RewriteEngine on
 
 RewriteCond %{HTTP_COOKIE} !^hkpt_los=(en|zh) [NC]
-RewriteRule ^/?$ /en [NC,L,R=302]
+RewriteRule ^/?$ /en [NC,L,R=301]
 
 RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
-RewriteRule ^/?$ /%1 [NC,L,R=302]
+RewriteRule ^/?$ /%1 [NC,L,R=301]
 
 RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
 RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /%1/$1.html [NC,L,R=302]
+RewriteRule ^(.*)$ /%1/$1.html [NC,L,R=301]
 
 RewriteCond %{HTTP_COOKIE} ^hkpt_los=(en|zh) [NC]
 RewriteCond %{REQUEST_URI} ^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /$1.html [NC,L,R=302]
+RewriteRule ^(.*)$ /$1.html [NC,L,R=301]
 
 RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /en/$1.html [NC,L,R=302]
+RewriteRule ^(.*)$ /en/$1.html [NC,L,R=301]
 
 RewriteCond %{REQUEST_URI} ^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /en/$1.html [NC,L,R=302]
+RewriteRule ^(.*)$ /en/$1.html [NC,L,R=301]
