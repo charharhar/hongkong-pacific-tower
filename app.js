@@ -49,9 +49,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.set('port', port);
-app.set('views', [
-  path.resolve(appRootDir.get(), 'views'),
+
+// app.set('views', [
+//   path.resolve(appRootDir.get(), 'views'),
+// ]);
+
+// For English
+app.set('en', [
+  path.resolve(appRootDir.get(), 'en'),
 ]);
+
+// For Mandarin
+app.set('zh', [
+  path.resolve(appRootDir.get(), 'zh'),
+]);
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/', express.static('build'))
