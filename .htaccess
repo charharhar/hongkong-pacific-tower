@@ -19,8 +19,8 @@ RewriteRule ^(.*)$ /$1.html [NC,L,R=301]
 
 RewriteCond %{REQUEST_URI} !^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /en/$1.html [NC,L,R=301]
+RewriteRule ^(.*)$ /$1.html [NC,L,R=301]
 
 RewriteCond %{REQUEST_URI} ^/(?:en|zh) [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ /en/$1.html [NC,L,R=301]
+RewriteRule ^(.*)$ /$1.html [NC,L,R=301]
